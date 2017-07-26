@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simulators</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="box" >
+				<div class="boxHead">
+					<label>
+						<input type="text" id="filterSimulators" required="required"/>
+						<span>Type seach here</span>
+						<i class="fa fa-search"></i>
+					</label>
+				</div>
+				<div class="boxBody">
+					<table class="table simulators">
+						<thead>
+							<tr>
+								<th><a href="javascript:void(0)" class="colorGray" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add simulator</a></th>
+								<th>&nbsp;</th>
+								<th class="fit"><b class="counter"></b> simulators</th>
+								<th class="fit"><b class="prices"></b> total</th>
+							</tr>
+						</thead>
+						<tbody>
+						
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Add simulator</h5>
+			</div>
+			<form id="newSimulatorForm">
+				<div class="modal-body">
+						<div class="form-group">
+							<label>
+								<input type="text" name="name" required="required"/>
+								<span>Name</span>
+							</label>
+						</div>
+						<div class="form-group">
+							<label>
+								<input type="text" name="id" required="required"/>
+								<span>ID</span>
+							</label>
+							<div class="alert alert-warning" id="addSimulatorWarningForID" style="display:none">
+							  <strong>Warning!</strong> This ID is already used!
+							</div>
+						</div>
+						<div class="form-group">
+							<label>
+								<input type="text" name="price" required="required" pattern="\d+" title="Only numbers allowed"/>
+								<span>Price</span>
+							</label>
+						</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<input type="submit" class="btn btn-primary" value="Save">
+				</div>
+			</form>
+		</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/data.js"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
